@@ -1,0 +1,31 @@
+@model proj.Models.CalcData;
+
+@{
+    ViewData["Title"] = "Calc";
+}
+
+<form class="d-flex-col">
+    <div>
+        <label asp-for="NumberOne">Liczba nr. 1</label>
+        <input type="number" asp-for="NumberOne">
+    </div>
+
+    <div>
+        <label asp-for="NumberOne">Liczba nr. 2</label>
+        <input type="number" asp-for="NumberTwo">
+    </div>
+
+    <div>
+        <label asp-for="NumberOne">Operacja</label>
+        <select asp-for="Operation">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+    </div>
+
+    <button>Oblicz</button>
+</form>
+
+Wynik: @ViewBag.Calculated
